@@ -1,4 +1,4 @@
-# covid_who
+# covid_Status
 
 I've done a project before to display covid status around the globe. But the statistics wasn't accurate since the API used was returning incorrect or old data.
 Due to the lack of API's which give correct data, I've written a program in JavaScript which parses updated results from the table provided by World Hearth Organization in their official website, www.https://covid19.who.int/table .

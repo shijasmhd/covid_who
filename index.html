@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Covid-19 Status</title>
+</head>
+<body>
+    <div class="blue-grey darken-4 row heading">
+        <div class="flow-text white-text text-darken-1">
+           <h2>Covid-19 Updates .</h2>
+        </div>
+    </div>
+    <div class="container" id="main">
+        <div class="card">
+            <div class="card-content">
+                <div class="center-align card-title red-text text-lighten-1" id="country">Global Status</div>
+                <div class="row">
+                    <div class="col s12 m6 grey-text text-darken-1">
+                        <h5>Country Code </h5>
+                    </div>
+                    <div class="col s12 m6 red-text text-lighten-1">
+                        <h5 class="right" id="totalCases"></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 red-text text-lighten-1">
+                        <h5>New Cases </h5>
+                    </div>
+                    <div class="col s12 m6 grey-text text-darken-1 right">
+                        <h5 class="right" id="totalRecoveries"></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 grey-text text-darken-1">
+                        <h5>Total Cases </h5>
+                    </div>
+                    <div class="col s12 m6 red-text text-lighten-1">
+                        <h5 class="right" id="totalDeaths"></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 red-text text-lighten-1">
+                        <h5>New Deaths </h5>
+                    </div>
+                    <div class="col s12 m6 grey-text text-darken-1 right">
+                        <h5 class="right" id="casesToday"></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 grey-text text-darken-1">
+                        <h5>Total Deaths </h5>
+                    </div>
+                    <div class="col s12 m6 red-text text-lighten-1">
+                        <h5 class="right" id="deathsToday"></h5>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col s12 m6 red-text text-lighten-1">
+                        <h5>Active Cases </h5>
+                    </div>
+                    <div class="col s12 m6 grey-text text-darken-1 right">
+                        <h5 class="right" id="activeCases"></h5>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container s12 m6 center-align" id="search">
+        <form id="countrySearch">
+            <input list="datalist" id="searchTxt" placeholder="Enter country name">
+            <label for="searchTxt">Search status by country</label>
+            <datalist id="datalist">
+            </datalist>
+        </form>
+    </div>
+    <div class="container flow-text center-align blue-grey darken-4 white-text" id="error">
+            <p id="errorHead">Something is Wrong !</p>
+            <p class="red-text text-darken-1" id="errorBody"></p>
+    </div>
+
+
+    <script type="text/javascript" src="papaparse.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
